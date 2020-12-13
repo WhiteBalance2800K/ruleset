@@ -1,0 +1,23 @@
+# > Apple
+DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,apple.co,Apple
+DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,crashlytics.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+DOMAIN,testflight.apple.com,Apple
+DOMAIN-SUFFIX,appsto.re,Apple
+DOMAIN,books.itunes.apple.com,Apple
+DOMAIN,hls.itunes.apple.com,Apple
+DOMAIN,apps.apple.com,Apple
+DOMAIN,itunes.apple.com,Apple
+DOMAIN,api-glb-sea.smoot.apple.com,Apple
+DOMAIN,lookup-api.apple.com,Apple
+DOMAIN-SUFFIX,apple.com.cn,DIRECT
+IP-CIDR,17.0.0.0/8,Apple,no-resolve
