@@ -1,83 +1,84 @@
 # >> OpenAI / ChatGPT
 # OpenAI A/B Flag, no geo blocking
 # DOMAIN,api.statsig.com
-DOMAIN-SUFFIX,openai.com,go
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,ai.com
-DOMAIN-KEYWORD,openai
-# DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-# DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-# DOMAIN,openaicomproductionae4b.blob.core.windows.net
-# DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,openai.com,AI
+DOMAIN-SUFFIX,oaistatic.com,AI
+DOMAIN-SUFFIX,sora.com,AI
+DOMAIN-SUFFIX,chatgpt.com,AI
+DOMAIN-SUFFIX,chat.com,AI
+DOMAIN-SUFFIX,ai.com,AI
+DOMAIN-KEYWORD,openai,AI
+# DOMAIN-SUFFIX,openaiapi-site.azureedge.net,AI
+# DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,AI
+# DOMAIN,openaicomproductionae4b.blob.core.windows.net,AI
+# DOMAIN,production-openaicom-storage.azureedge.net,AI
 
 # >> Perplexity
-DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,perplexity.ai,AI
+DOMAIN-SUFFIX,pplx.ai,AI
 
 # >> Claude
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,anthropic.com,AI
+DOMAIN-SUFFIX,claude.ai,AI
 
 # >> Google Gemini
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com,AI
+DOMAIN-SUFFIX,gemini.google.com,AI
 
 # >> Google DeepMind
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,deepmind.com,AI
+DOMAIN-SUFFIX,deepmind.google,AI
 
 # >> Google Generative Language API
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN-SUFFIX,geller-pa.googleapis.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com,AI
+DOMAIN-SUFFIX,geller-pa.googleapis.com,AI
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,AI
 
 # >> Google AI Studio
-DOMAIN,ai.google.dev
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN,alkalicore-pa.clients6.google.com
-DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
-DOMAIN-SUFFIX,generativeai.google
+DOMAIN,ai.google.dev,AI
+DOMAIN-SUFFIX,aistudio.google.com,AI
+DOMAIN-SUFFIX,makersuite.google.com,AI
+DOMAIN,alkalicore-pa.clients6.google.com,AI
+DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com,AI
+DOMAIN-SUFFIX,generativeai.google,AI
 
 # >> Google NotebookLM
-DOMAIN-SUFFIX,notebooklm.google
-DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notebooklm.google,AI
+DOMAIN-SUFFIX,notebooklm.google.com,AI
 
 # >> Google Jules
-DOMAIN,jules.google.com
+DOMAIN,jules.google.com,AI
 
 # >> POE
-DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,poe.com,AI
 
 # >> Meta AI
-DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,meta.ai,AI
 
 # >> Cloudflare AI Gateway
-DOMAIN,gateway.ai.cloudflare.com
+DOMAIN,gateway.ai.cloudflare.com,AI
 
 # >> Dify.AI
-DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,dify.ai,AI
 
 # >> Jasper
-DOMAIN-SUFFIX,clipdrop.co
-DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,clipdrop.co,AI
+DOMAIN-SUFFIX,jasper.ai,AI
 
 # >> OpenArt
-DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,openart.ai,AI
 
 # >> GitHub Copilot
 # api.*.githubcopilot.com is not required, since the ip & asn information are coming from api.github.com
 # see https://github.com/SukkaW/Surge/pull/46#discussion_r1849641627
-DOMAIN,api.github.com
+DOMAIN,api.github.com,AI
 
 # >> Grok
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com,AI
+DOMAIN-SUFFIX,x.ai,AI
 
 # >> groq
-DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,groq.com,AI
 
 # >> JetBrains AI
-DOMAIN,api.jetbrains.ai
+DOMAIN,api.jetbrains.ai,AI
