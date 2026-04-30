@@ -1,1 +1,166 @@
-schwab.com
+# =========================
+# Brokers / Trading
+# =========================
+
+# Charles Schwab
+DOMAIN-SUFFIX,schwab.com,FINANCE
+DOMAIN-SUFFIX,schwabcdn.com,FINANCE
+DOMAIN-SUFFIX,schwabassetmanagement.com,FINANCE
+
+# Interactive Brokers (IBKR)
+DOMAIN-SUFFIX,interactivebrokers.com,FINANCE
+DOMAIN-SUFFIX,ibkr.com,FINANCE
+DOMAIN-SUFFIX,ibllc.com,FINANCE
+
+# Fidelity
+DOMAIN-SUFFIX,fidelity.com,FINANCE
+DOMAIN-SUFFIX,fidelityinvestments.com,FINANCE
+DOMAIN-SUFFIX,fmr.com,FINANCE
+
+# TD Ameritrade (已并入 Schwab 但仍有域名)
+DOMAIN-SUFFIX,tdameritrade.com,FINANCE
+
+# E*TRADE
+DOMAIN-SUFFIX,etrade.com,FINANCE
+DOMAIN-SUFFIX,etradefinancial.com,FINANCE
+
+# Webull
+DOMAIN-SUFFIX,webull.com,FINANCE
+DOMAIN-SUFFIX,webullfintech.com,FINANCE
+
+# Robinhood
+DOMAIN-SUFFIX,robinhood.com,FINANCE
+DOMAIN-SUFFIX,robinhood.markets,FINANCE
+
+# Moomoo
+DOMAIN-SUFFIX,moomoo.com,FINANCE
+DOMAIN-SUFFIX,futunn.com,FINANCE
+
+# Tiger Brokers (老虎证券)
+DOMAIN-SUFFIX,itiger.com,FINANCE
+DOMAIN-SUFFIX,tigerbrokers.com,FINANCE
+
+# SoFi Invest
+DOMAIN-SUFFIX,sofi.com,FINANCE
+
+# Public.com
+DOMAIN-SUFFIX,public.com,FINANCE
+
+# TradeStation
+DOMAIN-SUFFIX,tradestation.com,FINANCE
+
+# Ally Invest
+DOMAIN-SUFFIX,ally.com,FINANCE
+
+# Tastytrade
+DOMAIN-SUFFIX,tastytrade.com,FINANCE
+
+# =========================
+# Crypto Exchanges
+# =========================
+
+# Coinbase
+DOMAIN-SUFFIX,coinbase.com,FINANCE
+DOMAIN-SUFFIX,coinbaseapi.com,FINANCE
+
+# Kraken
+DOMAIN-SUFFIX,kraken.com,FINANCE
+
+# Gemini
+DOMAIN-SUFFIX,gemini.com,FINANCE
+
+# Binance
+DOMAIN-SUFFIX,binance.com,FINANCE
+DOMAIN-SUFFIX,binance.us,FINANCE
+
+# OKX
+DOMAIN-SUFFIX,okx.com,FINANCE
+
+# Bybit
+DOMAIN-SUFFIX,bybit.com,FINANCE
+
+# KuCoin
+DOMAIN-SUFFIX,kucoin.com,FINANCE
+
+# =========================
+# Market Data / Finance Info
+# =========================
+
+# Yahoo Finance
+DOMAIN-SUFFIX,yahoo.com,FINANCE
+DOMAIN-SUFFIX,yahoofinance.com,FINANCE
+
+# Google Finance
+DOMAIN-SUFFIX,google.com,FINANCE
+
+# TradingView
+DOMAIN-SUFFIX,tradingview.com,FINANCE
+DOMAIN-SUFFIX,tvcdn.com,FINANCE
+
+# Seeking Alpha
+DOMAIN-SUFFIX,seekingalpha.com,FINANCE
+
+# MarketWatch
+DOMAIN-SUFFIX,marketwatch.com,FINANCE
+
+# Morningstar
+DOMAIN-SUFFIX,morningstar.com,FINANCE
+
+# Bloomberg
+DOMAIN-SUFFIX,bloomberg.com,FINANCE
+DOMAIN-SUFFIX,bloomberg.net,FINANCE
+
+# Reuters
+DOMAIN-SUFFIX,reuters.com,FINANCE
+
+# WSJ
+DOMAIN-SUFFIX,wsj.com,FINANCE
+
+# =========================
+# Banks (US Major)
+# =========================
+
+# Chase
+DOMAIN-SUFFIX,chase.com,FINANCE
+
+# Bank of America
+DOMAIN-SUFFIX,bankofamerica.com,FINANCE
+
+# Wells Fargo
+DOMAIN-SUFFIX,wellsfargo.com,FINANCE
+
+# Citi
+DOMAIN-SUFFIX,citi.com,FINANCE
+
+# Capital One
+DOMAIN-SUFFIX,capitalone.com,FINANCE
+
+# American Express
+DOMAIN-SUFFIX,americanexpress.com,FINANCE
+
+# US Bank
+DOMAIN-SUFFIX,usbank.com,FINANCE
+
+# Discover
+DOMAIN-SUFFIX,discover.com,FINANCE
+
+# =========================
+# ETF / Fund Companies
+# =========================
+
+# Vanguard
+DOMAIN-SUFFIX,vanguard.com,FINANCE
+
+# BlackRock / iShares
+DOMAIN-SUFFIX,blackrock.com,FINANCE
+DOMAIN-SUFFIX,ishares.com,FINANCE
+
+# State Street / SPDR
+DOMAIN-SUFFIX,ssga.com,FINANCE
+DOMAIN-SUFFIX,spdrs.com,FINANCE
+
+# Invesco
+DOMAIN-SUFFIX,invesco.com,FINANCE
+
+# Schwab ETF
+DOMAIN-SUFFIX,schwabassetmanagement.com,FINANCE
