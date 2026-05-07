@@ -40,7 +40,7 @@ const CAPTURE_URL_RE = /^https:\/\/[^/]*10010\.com\/.*(?:login|onLine)\.htm/i;
 
 $.messages = [];
 
-!(async () => {
+async function main() {
   if (typeof $request !== "undefined") {
     captureAccount();
     return;
@@ -58,13 +58,7 @@ $.messages = [];
     await account.run();
     if (i < accounts.length - 1) await wait(1200);
   }
-})()
-  .catch((err) => push(`脚本异常: ${safeError(err)}`))
-  .finally(() => {
-    const body = $.messages.join("\n");
-    if (body) $.msg($.name, "", body);
-    $.done(getDoneValue());
-  });
+}
 
 class UnicomAccount {
   constructor(raw, index) {
@@ -529,3 +523,11 @@ function Env(name) {
     }
   }(name);
 }
+
+main()
+  .catch((err) => push(`脚本异常: ${safeError(err)}`))
+  .finally(() => {
+    const body = $.messages.join("\n");
+    if (body) $.msg($.name, "", body);
+    $.done(getDoneValue());
+  });
