@@ -123,6 +123,7 @@ class UnicomAccount {
     if (code === "0") {
       this.ecsToken = data.ecs_token || "";
       if (data.desmobile) this.mobile = data.desmobile;
+      if (this.ecsToken) this.propagateLoginCookies();
       saveAccount({ token_online: this.token, mobile: this.mobile, updatedAt: Date.now() });
       this.log("登录态刷新成功");
       return true;
@@ -237,6 +238,16 @@ class UnicomAccount {
     this.cookies[host] = mergeSetCookie(this.cookies[host], headers);
   }
 
+  propagateLoginCookies() {
+    const authCookies = {
+      ecs_token: this.ecsToken,
+      c_mobile: this.mobile || ""
+    };
+    for (const host of ["activity.10010.com", "act.10010.com"]) {
+      this.cookies[host] = mergeCookieValues(this.cookies[host], authCookies);
+    }
+  }
+
   commonHeaders(url, referer) {
     return {
       "User-Agent": IOS_UA,
@@ -273,7 +284,7 @@ function loadAccounts() {
   const raw = getStore(STORE_KEY);
   if (!raw) return [];
   const parsed = parseJson(raw);
-  if (Array.isArray(parsed)) return parsed.filter(v => v && (v.token_online || v.token));
+  if (Array.isArray(parsed)) return dedupeAccounts(parsed.filter(v => v && (v.token_online || v.token)));
   if (parsed && (parsed.token_online || parsed.token)) return [parsed];
   return [];
 }
@@ -303,8 +314,28 @@ function saveAccount(account) {
     accounts.push(next);
   }
 
-  setStore(STORE_KEY, JSON.stringify(accounts));
-  return { updated, count: accounts.length };
+  const deduped = dedupeAccounts(accounts);
+  setStore(STORE_KEY, JSON.stringify(deduped));
+  return { updated, count: deduped.length };
+}
+
+function dedupeAccounts(accounts) {
+  const byKey = {};
+  for (const account of accounts) {
+    const token = account.token_online || account.token || "";
+    const mobile = account.mobile || account.desmobile || "";
+    if (!token) continue;
+    const key = mobile || `token:${token}`;
+    const existing = byKey[key];
+    if (!existing || Number(account.updatedAt || 0) >= Number(existing.updatedAt || 0)) {
+      byKey[key] = {
+        token_online: token,
+        mobile,
+        updatedAt: account.updatedAt || Date.now()
+      };
+    }
+  }
+  return Object.values(byKey);
 }
 
 async function request(options) {
@@ -377,6 +408,18 @@ function mergeSetCookie(cookie, headers) {
     });
   });
 
+  return Object.keys(jar).map(key => `${key}=${jar[key]}`).join("; ");
+}
+
+function mergeCookieValues(cookie, values) {
+  const jar = {};
+  String(cookie || "").split(";").forEach(part => {
+    const idx = part.indexOf("=");
+    if (idx > 0) jar[part.slice(0, idx).trim()] = part.slice(idx + 1).trim();
+  });
+  for (const key of Object.keys(values)) {
+    if (values[key]) jar[key] = values[key];
+  }
   return Object.keys(jar).map(key => `${key}=${jar[key]}`).join("; ");
 }
 
