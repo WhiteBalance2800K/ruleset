@@ -16,10 +16,11 @@
 配置示例:
 
 [rewrite_local]
-^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/refs/heads/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
+^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-request-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
+^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
 
 [task_local]
-30 8 * * * https://raw.githubusercontent.com/your/repo/main/ChinaUnicomQX.js, tag=中国联通签到, enabled=true
+30 8 * * * https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js, tag=中国联通签到, enabled=true
 
 [mitm]
 hostname = m.client.10010.com
@@ -259,16 +260,12 @@ function captureAccount() {
     return;
   }
 
-  const data = parseJson($response && $response.body);
-  if (!data || typeof data !== "object") {
-    $.msg($.name, "捕获失败", "响应不是 JSON");
-    return;
-  }
-
-  const token = data.token_online || extractFormValue($request.body, "token_online");
+  const data = parseJson($response && $response.body) || {};
+  const token = data.token_online || extractFormValue($request.body, "token_online") || "";
   const mobile = data.desmobile || data.mobile || data.phone || "";
   if (!token) {
-    $.msg($.name, "捕获失败", `未找到 token_online，响应码 ${safeText(data.code || data.status || "")}`);
+    const phase = typeof $response === "undefined" ? "请求体" : "响应体";
+    $.msg($.name, "捕获到联通接口但未找到 token", `${phase} ${getPath(url)}，响应码 ${safeText(data.code || data.status || "")}`);
     return;
   }
 
@@ -348,6 +345,10 @@ function assertAllowedHost(url) {
 
 function getHost(url) {
   return String(url).match(/^https?:\/\/([^/?#]+)/i)?.[1]?.toLowerCase() || "";
+}
+
+function getPath(url) {
+  return String(url).match(/^https?:\/\/[^/?#]+([^?#]*)/i)?.[1] || "";
 }
 
 function makeCookieStore() {
@@ -476,6 +477,9 @@ function setStore(key, value) {
 function getDoneValue() {
   if (typeof $response !== "undefined" && $response && typeof $response.body !== "undefined") {
     return { body: $response.body };
+  }
+  if (typeof $request !== "undefined" && $request && typeof $request.body !== "undefined") {
+    return { body: $request.body };
   }
   return {};
 }
