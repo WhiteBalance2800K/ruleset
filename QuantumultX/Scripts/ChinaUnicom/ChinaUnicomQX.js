@@ -16,14 +16,14 @@
 配置示例:
 
 [rewrite_local]
-^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-request-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
-^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
+^https:\/\/[^\/]*10010\.com\/.*(?:login|onLine)\.htm url script-request-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
+^https:\/\/[^\/]*10010\.com\/.*(?:login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
 
 [task_local]
 30 8 * * * https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js, tag=中国联通签到, enabled=true
 
 [mitm]
-hostname = m.client.10010.com
+hostname = *.10010.com, 10010.com
 */
 
 const $ = new Env("中国联通签到");
@@ -36,6 +36,7 @@ const ALLOWED_HOSTS = [
   "activity.10010.com",
   "act.10010.com"
 ];
+const CAPTURE_URL_RE = /^https:\/\/[^/]*10010\.com\/.*(?:login|onLine)\.htm/i;
 
 $.messages = [];
 
@@ -256,12 +257,12 @@ function captureAccount() {
   if (!$request || $request.method === "OPTIONS") return;
 
   const url = $request.url || "";
-  if (!/^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm/.test(url)) {
+  if (!CAPTURE_URL_RE.test(url)) {
     return;
   }
 
   const data = parseJson($response && $response.body) || {};
-  const token = data.token_online || extractFormValue($request.body, "token_online") || "";
+  const token = data.token_online || extractFormValue($request.body, "token_online") || extractQueryValue(url, "token_online") || "";
   const mobile = data.desmobile || data.mobile || data.phone || "";
   if (!token) {
     const phase = typeof $response === "undefined" ? "请求体" : "响应体";
@@ -412,6 +413,11 @@ function extractFormValue(body, key) {
   const reg = new RegExp(`(?:^|&)${key}=([^&]*)`);
   const match = String(body).match(reg);
   return match ? decodeURIComponent(match[1]) : "";
+}
+
+function extractQueryValue(url, key) {
+  const query = String(url || "").split("?")[1] || "";
+  return extractFormValue(query, key);
 }
 
 function parseJson(text) {
