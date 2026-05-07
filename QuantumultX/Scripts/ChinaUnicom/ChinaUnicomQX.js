@@ -16,7 +16,7 @@
 配置示例:
 
 [rewrite_local]
-^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/your/repo/main/ChinaUnicomQX.js
+^https:\/\/m\.client\.10010\.com\/mobileService\/(login|onLine)\.htm url script-response-body https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/refs/heads/main/QuantumultX/Scripts/ChinaUnicom/ChinaUnicomQX.js
 
 [task_local]
 30 8 * * * https://raw.githubusercontent.com/your/repo/main/ChinaUnicomQX.js, tag=中国联通签到, enabled=true
