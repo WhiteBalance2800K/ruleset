@@ -66,9 +66,6 @@ DOMAIN-SUFFIX,coinbaseapi.com,FINANCE
 # Kraken
 DOMAIN-SUFFIX,kraken.com,FINANCE
 
-# Gemini
-DOMAIN-SUFFIX,gemini.com,FINANCE
-
 # Binance
 DOMAIN-SUFFIX,binance.com,FINANCE
 DOMAIN-SUFFIX,binance.us,FINANCE
