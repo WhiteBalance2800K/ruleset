@@ -90,9 +90,6 @@ DOMAIN-SUFFIX,kucoin.com,FINANCE
 DOMAIN-SUFFIX,yahoo.com,FINANCE
 DOMAIN-SUFFIX,yahoofinance.com,FINANCE
 
-# Google Finance
-DOMAIN-SUFFIX,google.com,FINANCE
-
 # TradingView
 DOMAIN-SUFFIX,tradingview.com,FINANCE
 DOMAIN-SUFFIX,tvcdn.com,FINANCE
