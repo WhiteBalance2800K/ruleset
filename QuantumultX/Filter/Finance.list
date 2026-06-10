@@ -2,6 +2,11 @@
 # Brokers / Trading
 # =========================
 
+# HSBC
+
+DOMAIN-SUFFIX,hsbc.com.hk,FINANCE
+
+
 # Charles Schwab
 DOMAIN-SUFFIX,schwab.com,FINANCE
 DOMAIN-SUFFIX,schwabcdn.com,FINANCE
