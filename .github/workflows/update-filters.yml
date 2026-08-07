@@ -1,0 +1,49 @@
+name: Update QuantumultX Filters
+
+on:
+  schedule:
+    # Daily 16:00 UTC ≈ 00:00 Asia/Shanghai
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-filters
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Ensure push uses the same token with contents:write
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update filter lists
+        run: python3 scripts/update_filters.py
+
+      - name: Commit and push
+        env:
+          # Commits as WhiteBalance2800K (not the machine git user)
+          GIT_AUTHOR_NAME: WhiteBalance2800K
+          GIT_AUTHOR_EMAIL: 50662460+WhiteBalance2800K@users.noreply.github.com
+          GIT_COMMITTER_NAME: WhiteBalance2800K
+          GIT_COMMITTER_EMAIL: 50662460+WhiteBalance2800K@users.noreply.github.com
+        run: |
+          set -euo pipefail
+          git add QuantumultX/Filter
+          if git diff --staged --quiet; then
+            echo "No filter changes."
+            exit 0
+          fi
+          git commit -m "chore: update QuantumultX filters $(date -u +%Y-%m-%d)"
+          git push origin HEAD:${{ github.ref_name }}
