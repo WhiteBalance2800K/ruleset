@@ -45,16 +45,7 @@ https://raw.githubusercontent.com/WhiteBalance2800K/ruleset/main/QuantumultX/Fil
 
 ## 自动更新
 
-- Workflow：`.github/workflows/update-filters.yml`
-- 脚本：`scripts/update_filters.py`
-- 计划：每天 UTC 16:00（约北京时间次日 00:00），也可在 Actions 页手动 **Run workflow**
-- 提交身份：`WhiteBalance2800K`
-
-本地手动更新：
-
-```bash
-python3 scripts/update_filters.py
-```
+自动更新计划为每天北京时间零点。
 
 ---
 
