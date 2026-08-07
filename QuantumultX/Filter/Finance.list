@@ -4,162 +4,162 @@
 
 # HSBC
 
-DOMAIN-SUFFIX,hsbc.com.hk,FINANCE
+host-suffix, hsbc.com.hk, FINANCE
 
 
 # Charles Schwab
-DOMAIN-SUFFIX,schwab.com,FINANCE
-DOMAIN-SUFFIX,schwabcdn.com,FINANCE
-DOMAIN-SUFFIX,schwabassetmanagement.com,FINANCE
+host-suffix, schwab.com, FINANCE
+host-suffix, schwabcdn.com, FINANCE
+host-suffix, schwabassetmanagement.com, FINANCE
 
 # Interactive Brokers (IBKR)
-DOMAIN-SUFFIX,interactivebrokers.com,FINANCE
-DOMAIN-SUFFIX,ibkr.com,FINANCE
-DOMAIN-SUFFIX,ibllc.com,FINANCE
+host-suffix, interactivebrokers.com, FINANCE
+host-suffix, ibkr.com, FINANCE
+host-suffix, ibllc.com, FINANCE
 
 # Fidelity
-DOMAIN-SUFFIX,fidelity.com,FINANCE
-DOMAIN-SUFFIX,fidelityinvestments.com,FINANCE
-DOMAIN-SUFFIX,fmr.com,FINANCE
+host-suffix, fidelity.com, FINANCE
+host-suffix, fidelityinvestments.com, FINANCE
+host-suffix, fmr.com, FINANCE
 
 # TD Ameritrade (已并入 Schwab 但仍有域名)
-DOMAIN-SUFFIX,tdameritrade.com,FINANCE
+host-suffix, tdameritrade.com, FINANCE
 
 # E*TRADE
-DOMAIN-SUFFIX,etrade.com,FINANCE
-DOMAIN-SUFFIX,etradefinancial.com,FINANCE
+host-suffix, etrade.com, FINANCE
+host-suffix, etradefinancial.com, FINANCE
 
 # Webull
-DOMAIN-SUFFIX,webull.com,FINANCE
-DOMAIN-SUFFIX,webullfintech.com,FINANCE
+host-suffix, webull.com, FINANCE
+host-suffix, webullfintech.com, FINANCE
 
 # Robinhood
-DOMAIN-SUFFIX,robinhood.com,FINANCE
-DOMAIN-SUFFIX,robinhood.markets,FINANCE
+host-suffix, robinhood.com, FINANCE
+host-suffix, robinhood.markets, FINANCE
 
 # Moomoo
-DOMAIN-SUFFIX,moomoo.com,FINANCE
-DOMAIN-SUFFIX,futunn.com,FINANCE
+host-suffix, moomoo.com, FINANCE
+host-suffix, futunn.com, FINANCE
 
 # Tiger Brokers (老虎证券)
-DOMAIN-SUFFIX,itiger.com,FINANCE
-DOMAIN-SUFFIX,tigerbrokers.com,FINANCE
+host-suffix, itiger.com, FINANCE
+host-suffix, tigerbrokers.com, FINANCE
 
 # SoFi Invest
-DOMAIN-SUFFIX,sofi.com,FINANCE
+host-suffix, sofi.com, FINANCE
 
 # Public.com
-DOMAIN-SUFFIX,public.com,FINANCE
+host-suffix, public.com, FINANCE
 
 # TradeStation
-DOMAIN-SUFFIX,tradestation.com,FINANCE
+host-suffix, tradestation.com, FINANCE
 
 # Ally Invest
-DOMAIN-SUFFIX,ally.com,FINANCE
+host-suffix, ally.com, FINANCE
 
 # Tastytrade
-DOMAIN-SUFFIX,tastytrade.com,FINANCE
+host-suffix, tastytrade.com, FINANCE
 
 # =========================
 # Crypto Exchanges
 # =========================
 
 # Coinbase
-DOMAIN-SUFFIX,coinbase.com,FINANCE
-DOMAIN-SUFFIX,coinbaseapi.com,FINANCE
+host-suffix, coinbase.com, FINANCE
+host-suffix, coinbaseapi.com, FINANCE
 
 # Kraken
-DOMAIN-SUFFIX,kraken.com,FINANCE
+host-suffix, kraken.com, FINANCE
 
 # Binance
-DOMAIN-SUFFIX,binance.com,FINANCE
-DOMAIN-SUFFIX,binance.us,FINANCE
+host-suffix, binance.com, FINANCE
+host-suffix, binance.us, FINANCE
 
 # OKX
-DOMAIN-SUFFIX,okx.com,FINANCE
+host-suffix, okx.com, FINANCE
 
 # Bybit
-DOMAIN-SUFFIX,bybit.com,FINANCE
+host-suffix, bybit.com, FINANCE
 
 # KuCoin
-DOMAIN-SUFFIX,kucoin.com,FINANCE
+host-suffix, kucoin.com, FINANCE
 
 # =========================
 # Market Data / Finance Info
 # =========================
 
 # Yahoo Finance
-DOMAIN-SUFFIX,yahoo.com,FINANCE
-DOMAIN-SUFFIX,yahoofinance.com,FINANCE
+host-suffix, yahoo.com, FINANCE
+host-suffix, yahoofinance.com, FINANCE
 
 # TradingView
-DOMAIN-SUFFIX,tradingview.com,FINANCE
-DOMAIN-SUFFIX,tvcdn.com,FINANCE
+host-suffix, tradingview.com, FINANCE
+host-suffix, tvcdn.com, FINANCE
 
 # Seeking Alpha
-DOMAIN-SUFFIX,seekingalpha.com,FINANCE
+host-suffix, seekingalpha.com, FINANCE
 
 # MarketWatch
-DOMAIN-SUFFIX,marketwatch.com,FINANCE
+host-suffix, marketwatch.com, FINANCE
 
 # Morningstar
-DOMAIN-SUFFIX,morningstar.com,FINANCE
+host-suffix, morningstar.com, FINANCE
 
 # Bloomberg
-DOMAIN-SUFFIX,bloomberg.com,FINANCE
-DOMAIN-SUFFIX,bloomberg.net,FINANCE
+host-suffix, bloomberg.com, FINANCE
+host-suffix, bloomberg.net, FINANCE
 
 # Reuters
-DOMAIN-SUFFIX,reuters.com,FINANCE
+host-suffix, reuters.com, FINANCE
 
 # WSJ
-DOMAIN-SUFFIX,wsj.com,FINANCE
+host-suffix, wsj.com, FINANCE
 
 # =========================
 # Banks (US Major)
 # =========================
 
 # Chase
-DOMAIN-SUFFIX,chase.com,FINANCE
+host-suffix, chase.com, FINANCE
 
 # Bank of America
-DOMAIN-SUFFIX,bankofamerica.com,FINANCE
+host-suffix, bankofamerica.com, FINANCE
 
 # Wells Fargo
-DOMAIN-SUFFIX,wellsfargo.com,FINANCE
+host-suffix, wellsfargo.com, FINANCE
 
 # Citi
-DOMAIN-SUFFIX,citi.com,FINANCE
+host-suffix, citi.com, FINANCE
 
 # Capital One
-DOMAIN-SUFFIX,capitalone.com,FINANCE
+host-suffix, capitalone.com, FINANCE
 
 # American Express
-DOMAIN-SUFFIX,americanexpress.com,FINANCE
+host-suffix, americanexpress.com, FINANCE
 
 # US Bank
-DOMAIN-SUFFIX,usbank.com,FINANCE
+host-suffix, usbank.com, FINANCE
 
 # Discover
-DOMAIN-SUFFIX,discover.com,FINANCE
+host-suffix, discover.com, FINANCE
 
 # =========================
 # ETF / Fund Companies
 # =========================
 
 # Vanguard
-DOMAIN-SUFFIX,vanguard.com,FINANCE
+host-suffix, vanguard.com, FINANCE
 
 # BlackRock / iShares
-DOMAIN-SUFFIX,blackrock.com,FINANCE
-DOMAIN-SUFFIX,ishares.com,FINANCE
+host-suffix, blackrock.com, FINANCE
+host-suffix, ishares.com, FINANCE
 
 # State Street / SPDR
-DOMAIN-SUFFIX,ssga.com,FINANCE
-DOMAIN-SUFFIX,spdrs.com,FINANCE
+host-suffix, ssga.com, FINANCE
+host-suffix, spdrs.com, FINANCE
 
 # Invesco
-DOMAIN-SUFFIX,invesco.com,FINANCE
+host-suffix, invesco.com, FINANCE
 
 # Schwab ETF
-DOMAIN-SUFFIX,schwabassetmanagement.com,FINANCE
+host-suffix, schwabassetmanagement.com, FINANCE
